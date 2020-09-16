@@ -6,7 +6,7 @@
 
 **Test method**
 
-Exclude the [Simple features](#https://github.com/inspire-eu-validation/data/blob/master/schemas/simple-features.md) test case of the INSPIRE GML application schemas Conformance class.
+Exclude the [Simple features](https://github.com/inspire-eu-validation/data/blob/master/schemas/simple-features.md) test case of the INSPIRE GML application schemas Conformance class.
 
 
 **Reference(s)**: 
