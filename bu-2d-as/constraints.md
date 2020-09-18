@@ -8,7 +8,7 @@
 
 The following checks are performed for every feature in the dataset.
 
-* **singleReferenceGeometry**: Check that exactly one [geometry2D](#geometry2D) attribute is a reference geometry, i.e. a geometry2D with a referenceGeometry attribute set to “true” (OCL: "inv: self.geometry2D->select(referenceGeometry=true)->size() = 1"). The check applies to both Building and BuildingPart feature types.
+* **singleReferenceGeometry**: Check that exactly one geometry2D attribute is a reference geometry, i.e. a geometry2D with a [referenceGeometry](#referenceGeometry) attribute set to “true” (OCL: "inv: self.geometry2D->select(referenceGeometry=true)->size() = 1"). The check applies to both Building and BuildingPart feature types.
 
 * **Building parts shall be 2D**: Check that the [parts](#parts) of the building is represented using the [BuildingPart](#BuildingPart) type of the Buildings2D package (OCL: "inv: self.parts->oclIsKindOf(Buildings2D::BuildingPart)").
 
@@ -36,8 +36,8 @@ The namespace prefixes used as described in [README](./README.md#namespaces).
 
 Abbreviation                                               |  XPath expression                     |Multiplicity       |Voidable
 ---------------------------------------------------------- | ------------------------------------- | ------------------|----------
-geometry2D <a name="geometry2D"></a> | //schema-element(bu-core2d:Building)/bu-core2d:geometry2D/bu-base:BuildingGeometry2D/bu-base:referenceGeometry <br>  | 1  | No
-" | //schema-element(bu-core2d:BuildingPart)/bu-core2d:geometry2D/bu-base:BuildingGeometry2D/bu-base:referenceGeometry <br>//schema-element(bu-core2d:Building)/bu-base:parts/bu-core2d:BuildingPart/bu-core2d:geometry2D/bu-base:BuildingGeometry2D/bu-base:referenceGeometry | 1 (The parent has multiplicity 1..*) | No
+referenceGeometry <a name="referenceGeometry"></a> | //schema-element(bu-core2d:Building)/bu-core2d:geometry2D/bu-base:BuildingGeometry2D/bu-base:referenceGeometry <br>  | 1 | No
+" | //schema-element(bu-core2d:BuildingPart)/bu-core2d:geometry2D/bu-base:BuildingGeometry2D/bu-base:referenceGeometry <br>//schema-element(bu-core2d:Building)/bu-base:parts/bu-core2d:BuildingPart/bu-core2d:geometry2D/bu-base:BuildingGeometry2D/bu-base:referenceGeometry | 1 (1..\* for the parent element) | No
 parts <a name="parts"></a> | //schema-element(bu-core2d:Building)/bu-base:parts | 0..\* | Yes
 BuildingPart <a name="BuildingPart"></a> | //schema-element(bu-core2d:BuildingPart) <br> //schema-element(bu-core2d:Building)/bu-base:parts/bu-core2d:BuildingPart |  | 
 
