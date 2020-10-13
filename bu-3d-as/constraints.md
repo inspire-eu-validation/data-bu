@@ -10,7 +10,7 @@ The following checks are performed for every feature in the dataset.
 
 * **GeometryWhenNoParts**: Check that if a Building does not have any BuildingParts, at least the [geometry3DLoD1](#g3DLoD1) or [geometry3DLoD2](#g3DLoD2) or [geometry3DLoD3](#g3DLoD3) or [geometry3DLoD4](#g3DLoD4) attributes is provided, for the Building feature type.
 
-* **Building parts shall be 3D**: Check that the [parts](#parts) of the building is represented using the [BuildingPart](#BuildingPart) type of the Buildings3D package (OCL: "inv: self.parts->oclIsKindOf(Buildings3D::BuildingPart)"). If the representation is internal, throught an id, the check is automated. If is external, using an url, the check is manual and the message will be 'manualReviewConstraintURL'.
+* **Building parts shall be 3D**: Check that the [parts](#parts) of the building is represented using the [BuildingPart](#BuildingPart) type of the Buildings3D package (OCL: "inv: self.parts->oclIsKindOf(Buildings3D::BuildingPart)"). If the representation is internal, throught a gml:id, the check is automated. If is external, using an url, the check is manual and the message will be 'manualReviewConstraintURL'.
 
 * **MandatoryGeometry**: Check that at least one of the [geometry3DLoD1](#g3DLoD1_BP) or [geometry3DLoD2](#g3DLoD2_BP) or [geometry3DLoD3](#g3DLoD3_BP) or [geometry3DLoD4](#g3DLoD4_BP) attributes is provided, for the BuildingPart feature type.
 
@@ -35,7 +35,7 @@ Verify that the OCL constraints that are specified in the UML model of the appli
 Identifier  |  Message text (parameters start with '$')
 ---------------------------------------------------------- | -------------------------------------------------------------------------
 constraintViolation <a name="constraintViolation"/>  |  XML document '$filename', $featureType '$gmlid': The constraint '$constraint' is violated.
-manualReviewConstraintURL <a name="manualReviewConstraintURL"/>  |  XML document '{filename}', {featureType} '{gmlid}': The property '{property}' has a value '{value}' that is referencing to a external association, please review that this external reference is  represented using the BuildingPart type of the {type} package.
+manualReviewConstraintURL <a name="manualReviewConstraintURL"/>  |  XML document '{filename}', {featureType} '{gmlid}': The property '{property}' has a value '{value}' that is referencing to a external association, please review that this external reference is represented using the BuildingPart type of the {type} package.
 
 ## Contextual XPath references
 
