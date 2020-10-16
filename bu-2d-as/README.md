@@ -22,7 +22,7 @@ An indirect dependency is another conformance class whose requirements must be m
 
 | Specification | Conformance class | Related resource | Parameters |
 | ------------- | ----------------- | ---------------- | ---------- |
-| [TG DS-BU](./README.md#ref_TG_DS_BU) | [GML application schemas, Buildings](../bu-gml/README.md) | INSPIRE spatial data set encoded in GML, Buildings features | n/a |
+| [TG DS-BU](./README.md#ref_TG_DS_BU) | [Application schema, BuildingsBase](../bu-as/README.md) | INSPIRE spatial dataset, BuildingsBase features | n/a |
  
 ## Feature types <a name="feature-types"></a>
 
