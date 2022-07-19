@@ -30,4 +30,4 @@ The namespace prefixes used as described in [README.md](./README.md#namespaces).
 
 Abbreviation                                          |  XPath expression
 ----------------------------------------------------- | ------------------------------------------------------------------
-features <a name="features"></a>   |  //schema-element(bu-core2d:Building) <br> OR <br> //schema-element(bu-core3d:Building)
+features <a name="features"></a>   |  //schema-element(bu-core2d:Building) \| //schema-element(bu-core2d:BuildingPart) <br> OR <br> //schema-element(bu-core3d:Building) \| //schema-element(bu-core3d:BuildingPart) 
